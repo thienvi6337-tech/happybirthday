@@ -86,7 +86,7 @@ a{color:var(--ink)}
 /* vertical carousel (HT1..Tinkerbell1) */
 .vcarousel{position:relative; overflow:hidden; border-radius:22px; box-shadow:var(--shadow)}
 .vtrack{display:flex; transition:transform .6s ease}
-.vslide{min-width:100%; display:flex; justify-content:center; align-items:center; background:#fffdfc}
+.vslide{min-width:100%; display:flex; justify-content:center; align-items:center; background:var(--soft)} /* <-- đổi sang hồng nhạt */
 .vslide img{max-height:70vh; width:auto; height:auto; object-fit:contain; display:block}
 .vnav{position:absolute; inset:0; display:flex; align-items:center; justify-content:space-between; pointer-events:none}
 .vnav button{pointer-events:auto; border:0; width:42px; height:42px; border-radius:999px; background:#fff; box-shadow:var(--shadow); color:var(--ink); font-weight:800}
@@ -190,6 +190,10 @@ h3.title{margin:0 0 14px; font-weight:800; font-size:clamp(18px,2.6vw,26px); col
 .subpage h2{font-family:Montserrat, sans-serif; color:#ff4d94}
 .subpage p, .subpage a{color:#ff4d94}
 
+/* pill buttons (Vi Trô hello!) */
+.pill-row{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:10px 0 14px}
+.pill{display:inline-block; padding:10px 16px; border-radius:999px; background:#ffe5f3; color:#ff4d94; font-weight:800; box-shadow:var(--shadow); text-decoration:none; cursor:default}
+
 /* Prev/next dots under vcarousel */
 .dots{display:flex; justify-content:center; gap:8px; margin-top:10px}
 .dots button{width:8px; height:8px; border-radius:50%; border:0; background:#ffd0e3; cursor:pointer}
@@ -268,8 +272,9 @@ h3.title{margin:0 0 14px; font-weight:800; font-size:clamp(18px,2.6vw,26px); col
   </div>
   <div class="dots" id="vdots"></div>
 
+  <!-- (3) Updated microcopy EXACT text -->
   <p class="card note" style="margin-top:12px; text-align:left">
-    Em đặt ảnh của cả hai em bé ở đây bởi vì có lẽ nó là khoảng thời gian hồn nhiên nhất trong cả cuộc đời này - mà bất kỳ lúc nào nhìn lại, chúng ta cũng sẽ mỉm cười (nhỉ)? Giữ được sự hồn nhiên trong tất cả mọi điều thật khó - nhưng cũng sẽ thật tuyệt, nên hi vọng là tụi mình có thể vui vẻ với nhau như trẻ em và nâng niu nhau như những em bé, nhoé ạ (<a href="https://youtu.be/OUZA0RAv85U?si=pDRpDc3j2zMajV19" target="_blank" rel="noopener">link</a>). Thời gian sẽ lấy đi của mỗi người nhiều thứ, nhưng, nếu mệt quá thì em hi vọng người có thể quay về nhà nhá... Tinkerbell nói là biết đâu sinh nhật năm sau… hope so, hope so i ^.^
+    Em đặt ảnh của cả hai em bé ở đây bởi vì có lẽ nó là khoảng thời gian hồn nhiên nhất trong cả cuộc đời này - mà bất kỳ lúc nào nhìn lại, chúng ta cũng sẽ mỉm cười (nhỉ)? Giữ được sự hồn nhiên trong tất cả mọi điều thật khó - nhưng cũng sẽ thật tuyệt, nên hi vọng là tụi mình có thể vui vẻ với nhau như trẻ em và nâng niu nhau như những em bé, nhoé ạ (<a href="https://youtu.be/OUZA0RAv85U?si=pDRpDc3j2zMajV19" target="_blank" rel="noopener">link</a>). Thời gian sẽ lấy đi của mỗi người nhiều thứ, nhưng, nếu mệt quá thì em hi vọng người có thể quay về nhà nhá. Tinkerbell nói là biết đâu sinh nhật năm sau có thể viết tặng Hà Thanh một chiếc bài nhạc mới or anything kiểu kiểu vậy ạ, hope so, hope so i ^.^
   </p>
 </section>
 
@@ -396,47 +401,7 @@ h3.title{margin:0 0 14px; font-weight:800; font-size:clamp(18px,2.6vw,26px); col
   </div>
 </section>
 
-<!-- PLAYLIST -->
-<section class="container section reveal">
-  <div class="card" style="color:var(--ink)">
-    <h3 style="margin:0 0 10px; font-weight:800; text-align:left">Chiếc playlist này nè ạ ^.^</h3>
-    <iframe style="width:100%; min-height:420px; border:0; border-radius:14px; box-shadow:var(--shadow)"
-      src="https://www.youtube.com/embed/videoseries?list=PLz301c-yfQZ8YEHu6Jn-g9q8KxXaveREV"
-      title="YouTube playlist" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </div>
-</section>
-
-<!-- Envelope (Birthday Letter) -->
-<section class="container section reveal" id="letter">
-  <div id="env" class="envelope">
-    <div class="flap">
-      <div class="hint">Chạm vào để xem ^.^</div>
-    </div>
-    <div class="paper-wrap">
-      <span class="paw" id="paw">❀</span>
-      <div class="paper-inner" id="paper">
-        <p>
-          <strong>Còn đây là những điều đơn giản, không cầu kỳ mà Thiên Vi muốn nhắn nhủ:</strong><br><br>
-          Cảm ơn người vì đã mang đến cho em rất nhiều những cảm xúc và cả suy nghĩ, trải nghiệm - mà em chưa từng có bao giờ. Có thể Hà Thanh thấy em cũng giỏi, cũng làm được nhiều thứ, nhưng, em cũng chỉ là người bình thường, vẫn có rất nhiều hạn chế và vẫn chông chênh mỗi ngày - ý là vẫn nằm suy nghĩ và cũng chẳng biết phải làm gì tiếp theo. Mấy tháng gần đây em rảnh hơn nhiều và còn thấy mình ngốc đi nữa. Giỏi giang âu cũng chỉ là cái mác đẹp đẽ mà mọi người hay gán cho ta thôi, chứ điều mà em có thực ra chỉ là sự chân thành và tử tế, tận tâm này. Tuổi mới đừng khóc nhiều nhoé. Từ lần đầu em thấy người khóc, em đã tự hứa với lòng là nếu em còn ở cạnh người, em sẽ không để người phải khóc vì những uất ức đó nữa. Bây giờ và sau này chắc sẽ có người khác thay em làm điều này rồi, nên chỉ mong người cười nhiều hơn thôi. Niềm vui vốn dĩ đơn giản như khi mình xem meme, lướt web, thấy chiếc tin nhắn quan tâm hay là ngắm hoàng hôn mỗi chiều - kiểu vậy, nhỉ? Thật vui khi thấy story của Hà Thanh là những buổi chiều hoàng hôn và những buổi sáng đi làm trên metro đấy ạ. Ngày đấy, khi thấy người lướt xem điện thoại, rồi nhìn sang xung quanh team mình cũng hay thế, em đã nghĩ: Ôi *lắc đầu*. Thiên Vi mà người thấy luôn hustle thực ra nó cũng chỉ thích ngắm mưa, nhìn trời, nựng mèo và rung cảm với tất cả mọi thứ nhỏ nhất diễn ra mọi ngày thôi người ạ. Sự có mặt trọn vẹn là điều tốt nhất mà em có thể dành cho người (lần đó có share bài này về tag mà chắc người quên rồi quá hoặc là hỏng xem luôn éc). Ai cũng có những điều đẹp đẽ để mình nhìn vào đó mà cảm thông cho họ hơn. Nên là: hãy luôn dịu dàng với chính mình và dịu dàng với cả vết thương của người khác nha angel ơi *biến mất cùng làn khói*....
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Music/Movies links (giữ nguyên ở trang chính) -->
-<section class="container section reveal">
-  <h3 style="margin:0 0 10px; font-weight:800; color:var(--ink)">
-    Lúc nào chán quá thì mình nghe nhạc, còn chán hơn nữa thì mình xem phim, đọc sách, nấu ăn, làm bánh đồ ạ. Chắc người thông minh aka Nguyễn Hà Thanh sẽ thích “Inception” - poor vì chúng ta không có cơ hội xem cùng hẹ hẹ. Đời này thi vị lắm, chúc người enjoy nhiều nha ạ ^.^
-  </h3>
-  <div class="music-links">
-    <a href="https://www.youtube.com/watch?v=DydIIDQuhxU&list=RDDydIIDQuhxU&start_radio=1" target="_blank" rel="noopener">Thư cho anh</a>
-    <a href="https://www.youtube.com/watch?v=A8-ENEqhQjg" target="_blank" rel="noopener">Every day, Every Moment</a>
-    <a href="https://www.youtube.com/watch?v=YoHD9XEInc0" target="_blank" rel="noopener">Inception</a>
-    <a href="https://www.youtube.com/watch?v=zSWdZVtXT7E" target="_blank" rel="noopener">Interstellar</a>
-    <a href="https://www.youtube.com/watch?v=oglmFkKicYk&list=RDoglmFkKicYk&start_radio=1" target="_blank" rel="noopener">Wish</a>
-  </div>
-</section>
+<!-- (1) ĐÃ XOÁ block Nhạc/Phim ở TRANG CHỦ THEO YÊU CẦU -->
 
 <!-- Footer line -->
 <div class="container" style="padding-top:0; padding-bottom:48px; color:var(--ink)">
@@ -475,8 +440,19 @@ h3.title{margin:0 0 14px; font-weight:800; font-size:clamp(18px,2.6vw,26px); col
 <section id="vtroPage" class="subpage" aria-hidden="true">
   <div class="wrap">
     <a class="brand" href="#">Home Sweet Home</a>
+
     <div class="card">
       <h2>Vi Trô hello!</h2>
+
+      <!-- (4) Hàng 4 nút -->
+      <div class="pill-row">
+        <span class="pill">Nhạc</span>
+        <span class="pill">Phim</span>
+        <span class="pill">Sách</span>
+        <span class="pill">I chơi</span>
+      </div>
+
+      <!-- đoạn giới thiệu + link nhạc/phim giữ như cũ -->
       <p><strong>Lúc nào chán quá thì mình nghe nhạc, còn chán hơn nữa thì mình xem phim, đọc sách, nấu ăn, làm bánh đồ ạ. Chắc người thông minh aka Nguyễn Hà Thanh sẽ thích “Inception” - poor vì chúng ta không có cơ hội xem cùng hẹ hẹ. Đời này thi vị lắm, chúc người enjoy nhiều nha ạ ^.^</strong></p>
       <div class="music-links" style="margin-top:6px">
         <a href="https://www.youtube.com/watch?v=DydIIDQuhxU&list=RDDydIIDQuhxU&start_radio=1" target="_blank" rel="noopener">Thư cho anh</a>
@@ -485,7 +461,32 @@ h3.title{margin:0 0 14px; font-weight:800; font-size:clamp(18px,2.6vw,26px); col
         <a href="https://www.youtube.com/watch?v=zSWdZVtXT7E" target="_blank" rel="noopener">Interstellar</a>
         <a href="https://www.youtube.com/watch?v=oglmFkKicYk&list=RDoglmFkKicYk&start_radio=1" target="_blank" rel="noopener">Wish</a>
       </div>
+
+      <!-- (4) Khung postcard chứa TEXT dài -->
+      <div class="postcard" style="margin-top:16px; text-align:left">
+        <div class="wish-title"><strong>Fresh mind & gentle heart</strong></div>
+        <div style="white-space:pre-line">
+Hà Thanh từng hỏi Thiên Vi là làm sao để fresh mind hơn ạ. Đó cũng luôn là điều em mong được thấy ở người. Tại vì nếu nội tâm mình vững vàng và não mình fresh thì mình mới đón nhận nhiều điều tốt đẹp hoặc không tốt lắm trong cuộc sống, dễ cảm nhận được những điều tuyệt vời xung quanh mình hơn ạ. Nếu lòng mình cứ bão tố mãi thì thực ra mình sẽ hơi khó tiếp nhận và mở lòng với mọi thứ ạ. Thiên Vi biết này một phần là basic identity, mindset và rule của mỗi người rồi ạ. Cơ mà người đừng chọn giữ sự bực tức trong lòng nha, mình tìm cách chia sẻ nó ra - dù là dưới hình thức nào: kể ra, viết ra, viết nhạc diss (như dành cho mắm Thi),…chả hạn ạ. Thiên Vi thực sự là có tâm hồn phóng khoáng thật, ý là để nhớ được tất cả mọi thứ một cách clearly thì em thường chọn tha thứ, nói ra, không giữ lại bực tức và bao dung với mọi thứ hơn. Mà Thiên Vi tha thứ là tha thứ thật đấy haha. Còn cái gì không quan trọng thì thực ra nó còn chẳng chui vào não em được cơ ạ - người thấy điều này mà. Em vẫn suddenly cry khi nghĩ về chị Loan nhưng mà - it’s enough thôi ạ, người này vốn cũng chẳng xuất hiện trong tất cả những cuộc trò chuyện khác của Thiên Vi nữa, và vì em nghĩ nếu mình cứ dành space cho người này thì mình chẳng có thời gian làm những điều đáng yêu khác - ví dụ như là ngồi dei làm chiếc web này cho Hà Thanh nè ạ. Thiên Vi ngồi viết rap cho nhỏ Thi vì muốn tụi mình xả ra hết chuyện này cùng nhau, cũm muốn giải trí nựa ạ - và hi vọng Hà Thanh cũng hào hứng diss nó lần này nữa rồi chôn cái tên của nó luôn hẹ hẹ. Thiên Vi thấy chửi thề vui tại nó thể hiện cảm xúc và sự stress bên ngoài của mình, còn để chửi ai cay đắng thì Thiên Vi hong nặng lời với ai được - vì dỗi ai thì cũng chỉ có kỳ hạn thôi ò, và chắc là chỉ dỗi những người mình thực sự thương. Người em thương thì em chỉ thương thôi, còn người em ghét thì vứt. Người ta bảo là đã thương thì thương cho trọn vẹn, thương hết cả những lỗi lầm đấy ạ. 
+
+Vui biết mấy vì tụi mình đã đi được đến đây cùng nhau ạ. Xin lỗi Hà Thanh vì cuộc sống, cảm nhận, và cách hành xử của em khác người nhiều quá nên hay làm người mệt mỏi ạ. Hà Thanh hơi giống mẹ em ở chỗ là Thiên Vi từng nghĩ mình sẽ rất khó để tiến gần nhau hơn một bước nữa trong journey yêu thương này, nhưng, cuối cùng thì thực ra mình vẫn cố gắng để làm. Thật khó tin vì Thiên Vi chọn ở quê 2 tháng mấy rồi, chỉ để mỗi đêm đi chơi, đi dạo với mẹ, cả ngày nói chuyện với mẹ rất nhiều chỉ để hiểu nhau nhiều hơn. Thực sự là “Good things take time”, và điều gì cần xảy ra thì nó sẽ xảy ra thôi, nhỉ? 
+
+Thiên Vi thấy mình cười nhiều và lạc quan lắm, chắc tại vì em luôn thấy đủ. Em có nhiều ước mơ và sở thích quá, cũng có nhiều người em muốn chăm lo, nên chỉ chú trọng bồi đắp cho những điều đó thôi ạ. Và cũng không có lý do lắm khi em làm điều gì đâu, đơn giản là em muốn làm thôi ạ. Em có nhiều thứ cần làm như vậy nên thực ra chả dành thời gian để suy nghĩ lý do làm gì ạ, vì nghĩ xem thể hiện yêu thương bằng cách nào thì nó đã hết time rùi. Em thương Hà Thanh là thật tâm đấy đồ tồi ạ. Chỉ đơn giản là mình nhìn thấy chiếc gì đó thì mình sẽ muốn dành cho người ta thôi. Người hỏi em lý do thì đến cuối đời em cũng chẳng trả lời được đâu ạ. Thiên Vi muốn trích lại đoạn này để chúc Hà Thanh nè ạ. Bài này tên là I Wish You Enough. Nó là khúc mở đầu cho cuốn sách cùng tên của Bob Perks, thay lời chia tay mà một người cha hấp hối gửi đến con gái. Phiên bản trọn vẹn như thế này:
+"Ba chúc con đủ ánh mặt trời, để giữ cho tâm hồn con trong sáng
+Ba chúc con đủ những ngày mưa, để biết trân trọng những ngày nắng
+Ba chúc con đủ hạnh phúc, để giữ cho tinh thần con luôn sống
+Ba chúc con đủ đau thương, để biết yêu cả những niềm vui nhỏ nhất
+Ba chúc con đủ những gì con muốn, để con có thể hài lòng
+Ba chúc con đủ mất mát, để con yêu quý những gì con có
+Và ba chúc con đủ lời chào để vượt qua những câu tạm biệt
+Ba chúc con đủ."
+
+Em chưa học được cách self-care và đôi khi không trân trọng mình lắm, chắc là do mission của em là take care cho mọi người hix. Em vẫn đang học thôi ạ, nhưng, những điều còn lại, em nghĩ là em biết đủ, nhất là việc “yêu cả những niềm vui nhỏ nhất” và “yêu quý những gì con có” ấy ạ. 
+
+Có một fun fact là chiếc thư chúc năm mới mà em viết cho người, em từng viết là hi vọng năm nay mình có thể khám phá thế giới với nhau (có thể là Hà Thanh hong nhớ nên để em repeat lại hehe) cơ mà thực ra cuộc sống của Thiên Vi nó cũng như một chiếc thế giới thu nhỏ và có nhiều điều trong đó thật, nên Thiên Vi luôn muốn share với người - mà tại hong có dịp. Cơ mà, đấy, em hứa gì với người thì em có làm thật đấy ạ =)) Thiên Vi ngồi gom và bookmark trên maps tại nghĩ là mình i cũng nhiều và mình muốn giới thiệu nó với Hà Thanh hoặc là i với Hà Thanh. Tại vì Thiên Vi cũng hay thử cái này cái kia, ý là xưa giờ sống cũng kín nên không có hay đăng gì, chỉ có gặp Thiên Vi bên ngoài thì mới biết em đang làm gì và thực sự như nào thoai à. Một năm nay thì em bắt đầu sợ hong có gì lưu giữ nên bắt đầu share lên IG nhiều hơn roài ạ. Mong là Hà Thanh cũng tìm được những điều mình thấy hứng thú, những nơi mình muốn đến, việc mình muốn làm và làm nó cùng với những người mình yêu thương, khiến mình cảm thấy thoải mái nhất. Vì cảm giác đó sẽ tuyệt lắm. Như Thiên Vi share trên story ấy ạ - cảm giác i làm một thời gian dài, chỉ tập trung cho công việc và cuộc sống cũng chỉ xoay quanh 1 người, nhưng mà, sau khoảng đó mình thấy mình lớn hơn, mình để dành được một cục để mua đàn, mua sách, rồi mình boost expertise của mình sau khi enjoy mấy hobbies này - Thiên Vi thấy mình là người giàu nhất cuộc đời này roài ạ. Cuộc sống của em nó thường hoạt động theo cái nguyên lý đấy thôi ạ. Ngoài mấy chiếc button Thiên Vi để trong trang này thì thực ra Thiên Vi luôn plan là cuối tuần này mình sẽ đi xem kịch, cuối tuần kia mình đi bảo tàng, xem xiếc, i uống rụ,…plan tùm lum hết mà hong biết khi nào mình mới enjoy được hết. Cơ mà chúc tụi mình sẽ luôn có nhiều plan, nhiều điều muốn làm (và cảm thấy vui khi làm), để có được nhiều nhất những trải nghiệm trong cuộc sống nhen ạ. Thiên Vi build chiếc sub-page này để giới thiệu mấy chiếc thi vị (hoặc hong) trong cuộc sống của Thiên Vi thoai ạ. Hi vọng là một ngày nào đó - khi buồn hoặc muốn thử những cái mới này thì mình sẽ có những checklist chung ở các hạng mục này nha ạ. Hope so i ^.^
+        </div>
+      </div>
     </div>
+
     <a href="#" class="back">← Quay về trang chủ</a>
   </div>
 </section>
@@ -652,3 +653,5 @@ window.addEventListener('click', (e)=>{
   }
 },{passive:true});
 </script>
+</body>
+</html>
