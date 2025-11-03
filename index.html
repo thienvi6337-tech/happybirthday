@@ -78,7 +78,7 @@ a{color:var(--ink)}
 @media(min-width:900px){ .hero{grid-template-columns:420px 1fr} .hero .copy{margin:0} }
 
 /* corner tag */
-.corner-tag{display:inline-block; padding:8px 14px; border-radius:999px; background:#ffe5f3; color:var(--ink); font-weight:800}
+.corner-tag{display:inline-block; padding:8px 14px; border-radius:999px; background:#ffe5f3; color:var(--ink); font-weight:800; box-shadow:var(--shadow)}
 
 /* vertical carousel */
 .vcarousel{position:relative; overflow:hidden; border-radius:22px; box-shadow:var(--shadow)}
@@ -96,7 +96,7 @@ h3.title{margin:0 0 14px; font-weight:800; font-size:clamp(18px,2.6vw,26px); col
 .cal-wrap{background:var(--card); padding:20px; border-radius:22px; box-shadow:var(--shadow)}
 .cal-head{display:flex; align-items:center; justify-content:space-between}
 .cal-head h4{margin:6px 0 14px; font-size:clamp(18px,3.2vw,28px); color:var(--ink)}
-.cal-head button{border:0; background:#ffe5f3; padding:10px 16px; border-radius:999px; box-shadow:var(--shadow); font-weight:800; color:var(--ink)}
+.cal-head button{border:0; background:#ffe5f3; padding:10px 16px; border-radius:999px; box-shadow:var(--shadow); font-weight:800; color:#ff4d94}
 .grid{display:grid; grid-template-columns:repeat(7,1fr); gap:14px}
 .cell,.dow{background:#fff; border-radius:16px; padding:18px 0; box-shadow:var(--shadow)}
 .dow{background:linear-gradient(180deg,#fff,#fff0); font-weight:800; color:#ff66a3}
@@ -174,7 +174,7 @@ h3.title{margin:0 0 14px; font-weight:800; font-size:clamp(18px,2.6vw,26px); col
 @media(prefers-reduced-motion:reduce){ .mtrack{animation:none} }
 
 /* Music button */
-.music-btn{border:0; border-radius:999px; padding:10px 18px; background:#ffe5f3; color:var(--ink); font-weight:800; box-shadow:var(--shadow); cursor:pointer}
+.music-btn{border:0; border-radius:999px; padding:10px 18px; background:#ffe5f3; color:#ff4d94; font-weight:800; box-shadow:var(--shadow); cursor:pointer}
 .music-btn[aria-pressed="true"]{background:#ffccdf}
 
 /* sub-pages (hash) */
@@ -279,7 +279,6 @@ h3.title{margin:0 0 14px; font-weight:800; font-size:clamp(18px,2.6vw,26px); col
 .sig-inline{
   position:relative !important; right:auto !important; bottom:auto !important;
   display:block; margin:14px auto 0; width:min(260px,60%); opacity:1 !important;
-  /* đổi màu ảnh chữ ký sang hồng gần #ff76b4 */
   filter: brightness(0) saturate(100%) invert(29%) sepia(58%) saturate(1242%) hue-rotate(305deg) brightness(102%) contrast(96%);
 }
 </style>
@@ -692,8 +691,7 @@ Tặng HT list mấy chiếc phim Thiên Vi eo nè ạ (mà Thiên Vi xem nhiề
       <!-- BOOK tab -->
       <div class="tab" id="tab-book">
         <div class="love-box">
-          <div style="white-space:pre-line">
-Field này để sau này Hà Thanh đọc nhiều rồi cho Thiên Vi infor để fill vào nha ạ 😂 Xưa Thiên Vi ngốc lắm, tiền lãnh thưởng hay lấy mua đàn với mua sách hết lắm ạ, nhờ vậy chắc trông cũng “có tri” một xíu huhu hoặc hong. Từng plan rủ người i Cá Chép mà chưa được rủ thì Cá Chép đóng cửa mất tiêu òi. Thiên Vi hay i Nhã Nam với Cá Chép đọc sách nhắm. Thoai em thả đỡ vào dei mấy chiếc ảnh “vô tri” cho page này có tri xíu nha ạ ^.^
+          <div style="white-space:pre-line">Field này để sau này Hà Thanh đọc nhiều rồi cho Thiên Vi infor để fill vào nha ạ 😂 Xưa Thiên Vi ngốc lắm, tiền lãnh thưởng hay lấy mua đàn với mua sách hết lắm ạ, nhờ vậy chắc trông cũng “có tri” một xíu huhu hoặc hong. Từng plan rủ người i Cá Chép mà chưa được rủ thì Cá Chép đóng cửa mất tiêu òi. Thiên Vi hay i Nhã Nam với Cá Chép đọc sách nhắm. Thoai em thả đỡ vào dei mấy chiếc ảnh “vô tri” cho page này có tri xíu nha ạ ^.^
           </div>
         </div>
 
